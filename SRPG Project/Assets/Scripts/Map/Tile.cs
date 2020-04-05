@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Tile
 {
-    private int _Xpos;
-    private int _Ypos;
+    public struct TilePosition{
+        public int Xpos;
+        public int Ypos;
+    }
+    private TilePosition _pos; 
 
     public Tile(int Xpos,int Ypos){
-
+        _pos.Xpos = Xpos;
+        _pos.Ypos = Ypos;
     }
 
     public int Xpos{
-        get { return _Xpos; }
-        set { _Xpos = value; }
+        get { return _pos.Xpos; }
+        set { _pos.Xpos = value; }
     }
 
     public int Ypos{
-        get { return _Ypos; }
-        set { _Ypos = value; }
+        get { return _pos.Ypos; }
+        set { _pos.Ypos = value; }
     }
 
 }
